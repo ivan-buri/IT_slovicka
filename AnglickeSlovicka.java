@@ -19,6 +19,7 @@ public class AnglickeSlovicka {
     private int pocetPokusov = 3;
     Scanner vstupHodnota = new Scanner(System.in);
 
+    
     public void skusajSlovo(String slovenskeSlovo, String anglSlovo) {
 
         System.out.print(anglSlovo + " = ");
