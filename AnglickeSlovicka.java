@@ -14,7 +14,7 @@ public class AnglickeSlovicka {
 
     private int spravneOdpovede = 0;
     private int otazkyPocet = 0;
-    private String[] poleSlov = new String[5];
+    private String[] poleSlov = new String[11];
     private int pocetPokusov = 3;
     Scanner vstupHodnota = new Scanner(System.in);
 
@@ -84,7 +84,16 @@ public class AnglickeSlovicka {
                 System.out.println("----------------------------------");
 
                 return;
-            } else if (slovo.equalsIgnoreCase(slovenskeSlovo) || slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+            } 
+            else if (slovo.equalsIgnoreCase(slovenskeSlovo) && slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+                spravneOdpovede++;
+                System.out.println(spravneOdpovede + " spravna odpoved ");
+                poleSlov[otazkyPocet] = "";
+                System.out.println("----------------------------------");
+
+                break;
+            }
+            else if (slovo.equalsIgnoreCase(slovenskeSlovo) || slovo.equalsIgnoreCase(slovenskeSlovo2)) {
 
                 spravneOdpovede++;
                 System.out.println(spravneOdpovede + " spravna odpoved ");
@@ -95,14 +104,7 @@ public class AnglickeSlovicka {
 
                 break;
 
-            } else if (slovo.equalsIgnoreCase(slovenskeSlovo) && slovo.equalsIgnoreCase(slovenskeSlovo2)) {
-                spravneOdpovede++;
-                System.out.println(spravneOdpovede + " spravna odpoved ");
-                poleSlov[otazkyPocet] = "";
-                System.out.println("----------------------------------");
-
-                break;
-            } else if (!slovo.equalsIgnoreCase(slovenskeSlovo) || !slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+            }  else if (!slovo.equalsIgnoreCase(slovenskeSlovo) || !slovo.equalsIgnoreCase(slovenskeSlovo2)) {
                 System.out.println(i + " Nespravna odpoved ");
 
             }
@@ -115,7 +117,6 @@ public class AnglickeSlovicka {
             }
 
         }
-        System.out.println("----------------------------------");
 
     }
 

@@ -1,13 +1,11 @@
 package sk.itslovicka;
 
-
 import sk.itslovicka.AnglickeSlovicka;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
 /**
  *
  * @author Edo
@@ -35,7 +33,14 @@ public class Main {
         anglickeSlovicka.skusajSlovo("pristup", "acces");
         anglickeSlovicka.skusajSlovo("oramovanie", "border");
         anglickeSlovicka.skusajSlovo("stlpec", "column");
-        anglickeSlovicka.skusajSlovo2("spolocny","bezny", "common");
+        anglickeSlovicka.skusajSlovo2("spolocny", "bezny", "common");
+        anglickeSlovicka.skusajSlovo("podmienka", "condition");
+        anglickeSlovicka.skusajSlovo("zavisly", "dependent");
+        anglickeSlovicka.skusajSlovo("nasadenie", "deployment");
+        anglickeSlovicka.skusajSlovo("vyraz", "expression");
+        anglickeSlovicka.skusajSlovo2("chyba", "porucha", "fault");
+        anglickeSlovicka.skusajSlovo("vlákno", "fiber");
+
         anglickeSlovicka.vyhodnocujTest();
 
     }
