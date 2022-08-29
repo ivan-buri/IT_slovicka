@@ -69,7 +69,7 @@ public class AnglickeSlovicka {
     public void vyhodnocujTest() {
         System.out.println();
 
-        System.out.println("Vyhodnotenie testu");
+        System.out.println("             ***Vyhodnotenie testu***\n");
 
         System.out.println("Odpovedal/a si " + spravneOdpovede + " x spravne z " + otazkyPocet + " otazok");
         System.out.println("------------------------------------------");
