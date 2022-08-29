@@ -64,7 +64,7 @@ public class AnglickeSlovicka {
 
     }
 
-    public void skusajSlovo2(String slovenskeSlovo, String slovenskeSlovo2, String anglSlovo) {
+    public void skusajSlovo(String slovenskeSlovo, String slovenskeSlovo2, String anglSlovo) {
 
         System.out.print(anglSlovo + " = ");
         otazkyPocet++;
@@ -119,6 +119,7 @@ public class AnglickeSlovicka {
         }
 
     }
+    
 
     public void vyhodnocujTest() {
         System.out.println();
