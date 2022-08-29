@@ -1,6 +1,5 @@
 package sk.itslovicka;
 
-
 import java.util.Scanner;
 
 /*
@@ -19,7 +18,6 @@ public class AnglickeSlovicka {
     private int pocetPokusov = 3;
     Scanner vstupHodnota = new Scanner(System.in);
 
-    
     public void skusajSlovo(String slovenskeSlovo, String anglSlovo) {
 
         System.out.print(anglSlovo + " = ");
@@ -63,6 +61,61 @@ public class AnglickeSlovicka {
             }
 
         }
+
+    }
+
+    public void skusajSlovo2(String slovenskeSlovo, String slovenskeSlovo2, String anglSlovo) {
+
+        System.out.print(anglSlovo + " = ");
+        otazkyPocet++;
+
+        for (int i = 1; i <= pocetPokusov; i++) {
+            String slovo = vstupHodnota.next();
+
+            if (slovo.equalsIgnoreCase("K")) {
+                System.out.println(" Spravna odpoved je: " + slovenskeSlovo + ", " + slovenskeSlovo2);
+                poleSlov[otazkyPocet] = anglSlovo + " = " + slovenskeSlovo + ", " + slovenskeSlovo2;
+                System.out.println("----------------------------------");
+
+                System.exit(0);
+            } else if (slovo.equalsIgnoreCase("N")) {
+                System.out.println(" Spravna odpoved je: " + slovenskeSlovo + ", " + slovenskeSlovo2);
+                poleSlov[otazkyPocet] = anglSlovo + " = " + slovenskeSlovo + ", " + slovenskeSlovo2;
+                System.out.println("----------------------------------");
+
+                return;
+            } else if (slovo.equalsIgnoreCase(slovenskeSlovo) || slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+
+                spravneOdpovede++;
+                System.out.println(spravneOdpovede + " spravna odpoved ");
+                poleSlov[otazkyPocet] = "";
+                System.out.println(" Spravna odpoved je: " + slovenskeSlovo + ", " + slovenskeSlovo2);
+
+                System.out.println("----------------------------------");
+
+                break;
+
+            } else if (slovo.equalsIgnoreCase(slovenskeSlovo) && slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+                spravneOdpovede++;
+                System.out.println(spravneOdpovede + " spravna odpoved ");
+                poleSlov[otazkyPocet] = "";
+                System.out.println("----------------------------------");
+
+                break;
+            } else if (!slovo.equalsIgnoreCase(slovenskeSlovo) || !slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+                System.out.println(i + " Nespravna odpoved ");
+
+            }
+
+            if (i == 3) {
+                System.out.println(" Spravna odpoved je: " + slovenskeSlovo + ", " + slovenskeSlovo2);
+                poleSlov[otazkyPocet] = anglSlovo + " = " + slovenskeSlovo + ", " + slovenskeSlovo2;
+                System.out.println("----------------------------------");
+
+            }
+
+        }
+        System.out.println("----------------------------------");
 
     }
 

@@ -35,7 +35,7 @@ public class Main {
         anglickeSlovicka.skusajSlovo("pristup", "acces");
         anglickeSlovicka.skusajSlovo("oramovanie", "border");
         anglickeSlovicka.skusajSlovo("stlpec", "column");
-        anglickeSlovicka.skusajSlovo("spolocny", "common");
+        anglickeSlovicka.skusajSlovo2("spolocny","bezny", "common");
         anglickeSlovicka.vyhodnocujTest();
 
     }
