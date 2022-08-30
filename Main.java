@@ -33,12 +33,12 @@ public class Main {
         anglickeSlovicka.skusajSlovo("pristup", "acces");
         anglickeSlovicka.skusajSlovo("oramovanie", "border");
         anglickeSlovicka.skusajSlovo("stlpec", "column");
-        anglickeSlovicka.skusajSlovo("spolocny", "bezny", "common");
+        anglickeSlovicka.skusajSlovo("spolocny", "bezny", "spolocny,bezny", "bezny,spolocny", "common");
         anglickeSlovicka.skusajSlovo("podmienka", "condition");
         anglickeSlovicka.skusajSlovo("zavisly", "dependent");
         anglickeSlovicka.skusajSlovo("nasadenie", "deployment");
         anglickeSlovicka.skusajSlovo("vyraz", "expression");
-        anglickeSlovicka.skusajSlovo("chyba", "porucha", "fault");
+        anglickeSlovicka.skusajSlovo("chyba", "porucha", "chyba,porucha", "porucha,chyba", "fault");
         anglickeSlovicka.skusajSlovo("vlakno", "fiber");
 
         anglickeSlovicka.vyhodnocujTest();

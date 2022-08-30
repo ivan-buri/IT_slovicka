@@ -64,7 +64,7 @@ public class AnglickeSlovicka {
 
     }
 
-    public void skusajSlovo(String slovenskeSlovo, String slovenskeSlovo2, String anglSlovo) {
+    public void skusajSlovo(String slovenskeSlovo, String slovenskeSlovo2, String slovenskeSlovo3, String slovenskeSlovo4, String anglSlovo) {
 
         System.out.print(anglSlovo + " = ");
         otazkyPocet++;
@@ -84,16 +84,16 @@ public class AnglickeSlovicka {
                 System.out.println("----------------------------------");
 
                 return;
-            } 
-            else if (slovo.equalsIgnoreCase(slovenskeSlovo) && slovo.equalsIgnoreCase(slovenskeSlovo2)) {
-                spravneOdpovede++;
-                System.out.println(spravneOdpovede + " spravna odpoved ");
-                poleSlov[otazkyPocet] = "";
-                System.out.println("----------------------------------");
-
-                break;
-            }
-            else if (slovo.equalsIgnoreCase(slovenskeSlovo) || slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+            } //            else if (slovo.equalsIgnoreCase(slovenskeSlovo) && slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+            //                spravneOdpovede++;
+            //                System.out.println(spravneOdpovede + " spravna odpoved ");
+            //                poleSlov[otazkyPocet] = "";
+            //                System.out.println("----------------------------------");
+            //
+            //                break;
+            //            }
+            else if (slovo.equalsIgnoreCase(slovenskeSlovo) || slovo.equalsIgnoreCase(slovenskeSlovo2)
+                    || slovo.equalsIgnoreCase(slovenskeSlovo3) || slovo.equalsIgnoreCase(slovenskeSlovo4)) {
 
                 spravneOdpovede++;
                 System.out.println(spravneOdpovede + " spravna odpoved ");
@@ -104,7 +104,7 @@ public class AnglickeSlovicka {
 
                 break;
 
-            }  else if (!slovo.equalsIgnoreCase(slovenskeSlovo) || !slovo.equalsIgnoreCase(slovenskeSlovo2)) {
+            } else if (!slovo.equalsIgnoreCase(slovenskeSlovo) || !slovo.equalsIgnoreCase(slovenskeSlovo2)) {
                 System.out.println(i + " Nespravna odpoved ");
 
             }
@@ -119,7 +119,6 @@ public class AnglickeSlovicka {
         }
 
     }
-    
 
     public void vyhodnocujTest() {
         System.out.println();
@@ -129,7 +128,7 @@ public class AnglickeSlovicka {
         System.out.println("Odpovedal/a si " + spravneOdpovede + " x spravne z " + otazkyPocet + " otazok");
         System.out.println("------------------------------------------");
 
-        System.out.println("Slova ktore si nevedel/a : ");
+        System.out.println("Slova ktore si nevedel/a: ");
 
         for (otazkyPocet = 1; otazkyPocet < poleSlov.length; otazkyPocet++) {
             String nespravnSlovicko = poleSlov[otazkyPocet];
